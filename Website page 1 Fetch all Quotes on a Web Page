@@ -1,0 +1,14 @@
+const page = await browser.newPage();
+await page.goto("http://quotes.toscrape.com/scroll");
+const quotes = await page.evaluate(() => {
+const quotesArray = document.querySelectorAll(".quote");
+return Array.from(quotesArray).map((quote) => {
+const text = quote.querySelector(".text").innerText;
+const author = quote.querySelector(".author").innerText;
+return { text, author };
+});
+});
+console.log(quotes);
+await browser.close();
+};
+scrapQuotes();
