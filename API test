@@ -1,0 +1,4 @@
+endpoints need to be tested via Postman
+GET/http://quotes.toscrape.com/api/quotes  retrieve list of authors
+GET/http://quotes.toscrape.com/scroll
+POST/http://quotes.toscrape.com/login
