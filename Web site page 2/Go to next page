@@ -1,0 +1,4 @@
+console.log(quotes);
+const searchResult = ".next > a";
+await page.waitForSelector(searchResult);
+await page.click(searchResult);
